@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Takunda Z. — technical product support portfolio: enterprise support, SaaS troubleshooting, APIs, Azure and automation.">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="color-scheme" content="light">
+  <title>Takunda Z. | Technical Product Support</title>
+  <style>
+    :root{
+      --bg:#f6f7f9;
+      --paper:#ffffff;
+      --ink:#15171a;
+      --muted:#616873;
+      --line:#dfe3e8;
+      --accent:#243447;
+      --accent-soft:#eef2f6;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:var(--bg);
+      color:var(--ink);
+      line-height:1.6;
+    }
+    a{color:inherit}
+    .wrap{width:min(calc(100% - 36px),var(--max));margin:0 auto}
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:24px 0;
+      gap:24px;
+    }
+    .brand{font-weight:800;letter-spacing:-.02em}
+    .navlinks{display:flex;gap:18px;flex-wrap:wrap}
+    .navlinks a{font-size:.92rem;color:var(--muted);text-decoration:none}
+    .navlinks a:hover{color:var(--ink)}
+    .hero{
+      padding:72px 0 56px;
+      display:grid;
+      grid-template-columns:1.45fr .8fr;
+      gap:54px;
+      align-items:end;
+    }
+    .eyebrow{
+      display:inline-block;
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:18px;
+    }
+    h1{
+      font-size:clamp(2.7rem,7vw,5.6rem);
+      line-height:.98;
+      letter-spacing:-.055em;
+      margin:0 0 24px;
+      max-width:900px;
+    }
+    .lead{
+      font-size:clamp(1.08rem,2vw,1.32rem);
+      color:var(--muted);
+      max-width:760px;
+      margin:0;
+    }
+    .hero-side{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+    }
+    .hero-side strong{display:block;font-size:1.05rem;margin-bottom:8px}
+    .hero-side p{margin:0 0 18px;color:var(--muted)}
+    .buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{
+      display:inline-block;
+      text-decoration:none;
+      border:1px solid var(--ink);
+      border-radius:999px;
+      padding:10px 15px;
+      font-weight:700;
+      font-size:.9rem;
+      background:var(--ink);
+      color:#fff;
+    }
+    .btn.secondary{background:transparent;color:var(--ink);border-color:var(--line)}
+    .metrics{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:1px;
+      background:var(--line);
+      border:1px solid var(--line);
+      border-radius:18px;
+      overflow:hidden;
+      margin:8px 0 74px;
+    }
+    .metric{background:var(--paper);padding:26px}
+    .metric b{display:block;font-size:2rem;letter-spacing:-.04em}
+    .metric span{color:var(--muted);font-size:.9rem}
+    section{padding:0 0 76px}
+    .section-head{
+      display:grid;
+      grid-template-columns:.55fr 1.45fr;
+      gap:38px;
+      margin-bottom:28px;
+      align-items:start;
+    }
+    .section-head h2{
+      font-size:1rem;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      margin:4px 0 0;
+      color:var(--muted);
+    }
+    .section-head p{
+      font-size:1.45rem;
+      line-height:1.35;
+      letter-spacing:-.02em;
+      margin:0;
+      max-width:780px;
+    }
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .card{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:26px;
+    }
+    .card .num{
+      font-size:.76rem;
+      color:var(--muted);
+      font-weight:800;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+    }
+    .card h3{font-size:1.16rem;margin:10px 0 9px;letter-spacing:-.015em}
+    .card p{color:var(--muted);margin:0}
+    .case{
+      display:grid;
+      grid-template-columns:.42fr 1.58fr;
+      gap:30px;
+      padding:28px 0;
+      border-top:1px solid var(--line);
+    }
+    .case:last-child{border-bottom:1px solid var(--line)}
+    .case h3{margin:0;font-size:1.05rem}
+    .case p{margin:0;color:var(--muted)}
+    .case p + p{margin-top:10px}
+    .tagrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+    .tag{
+      padding:5px 9px;
+      background:var(--accent-soft);
+      border-radius:999px;
+      font-size:.78rem;
+      font-weight:700;
+      color:var(--accent);
+    }
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:24px;
+      min-height:220px;
+      display:flex;
+      flex-direction:column;
+    }
+    .project h3{margin:0 0 8px;font-size:1.08rem}
+    .project p{color:var(--muted);margin:0 0 16px}
+    .project .tags{margin-top:auto;color:var(--muted);font-size:.82rem;font-weight:700}
+    .why{
+      background:var(--accent);
+      color:white;
+      border-radius:22px;
+      padding:clamp(28px,5vw,54px);
+      display:grid;
+      grid-template-columns:.65fr 1.35fr;
+      gap:40px;
+    }
+    .why h2{margin:0;font-size:1rem;text-transform:uppercase;letter-spacing:.12em;opacity:.72}
+    .why p{font-size:1.45rem;line-height:1.42;margin:0;letter-spacing:-.02em}
+    .stack{display:flex;gap:9px;flex-wrap:wrap;margin-top:28px}
+    .stack span{
+      border:1px solid rgba(255,255,255,.25);
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:.82rem;
+    }
+    footer{
+      border-top:1px solid var(--line);
+      padding:28px 0 46px;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+    footer .row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    @media(max-width:760px){
+      .hero,.section-head,.case,.why{grid-template-columns:1fr}
+      .hero{padding-top:44px}
+      .metrics{grid-template-columns:repeat(2,1fr)}
+      .grid,.project-grid{grid-template-columns:1fr}
+      nav{align-items:flex-start;flex-direction:column}
+      .navlinks{gap:12px}
+      h1{font-size:3.3rem}
+    }
+    @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav aria-label="Primary navigation">
+      <div class="brand">Takunda Z.</div>
+      <div class="navlinks">
+        <a href="#proof">Proof</a>
+        <a href="#cases">Support stories</a>
+        <a href="#builds">Technical builds</a>
+        <a href="#why">Why product support</a>
+      </div>
+    </nav>
+
+    <main>
+      <header class="hero">
+        <div>
+          <span class="eyebrow">Technical Product Support</span>
+          <h1>I investigate the issue, explain it clearly, and leave support better than I found it.</h1>
+          <p class="lead">
+            Enterprise support experience across SaaS applications, identity, email and endpoints,
+            backed by hands-on API, cloud and automation work. I enjoy the point where user context
+            meets technical investigation.
+          </p>
+        </div>
+        <aside class="hero-side" aria-label="Contact and relocation">
+          <strong>Takunda Z.</strong>
+          <p>MSc Advanced Computer Science · Swansea, UK · Open to relocate to Sydney.</p>
+          <div class="buttons">
+            <a class="btn" href="mailto:takundainfo@gmail.com">Email me</a>
+            <a class="btn secondary" href="https://www.linkedin.com/in/takuz">LinkedIn</a>
+            <a class="btn secondary" href="https://github.com/takundaziki">GitHub</a>
+          </div>
+        </aside>
+      </header>
+
+      <section id="proof" aria-labelledby="proof-title">
+        <div class="metrics">
+          <div class="metric"><b>4,000+</b><span>incidents handled</span></div>
+          <div class="metric"><b>700+</b><span>technical tasks</span></div>
+          <div class="metric"><b>80%</b><span>first-line resolution rate</span></div>
+          <div class="metric"><b>Distinction</b><span>MSc Advanced Computer Science</span></div>
+        </div>
+
+        <div class="section-head">
+          <h2 id="proof-title">How I work</h2>
+          <p>Support is not just closing the current case. The useful work is understanding what happened, communicating it well, and making the next occurrence easier to solve.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="num">01 · Investigate</span>
+            <h3>Follow evidence, not assumptions</h3>
+            <p>I use ServiceNow histories, related incidents, sign-in and audit information, and system context to narrow problems before escalating.</p>
+          </article>
+          <article class="card">
+            <span class="num">02 · Communicate</span>
+            <h3>Make technical problems understandable</h3>
+            <p>I explain findings and next steps to users with different levels of technical confidence, while giving specialist teams the evidence they need.</p>
+          </article>
+          <article class="card">
+            <span class="num">03 · Improve</span>
+            <h3>Turn repeated problems into reusable knowledge</h3>
+            <p>I create knowledge articles and troubleshooting guidance from recurring issues, and share complex troubleshooting approaches with colleagues.</p>
+          </article>
+          <article class="card">
+            <span class="num">04 · Go deeper</span>
+            <h3>Understand what sits behind the product</h3>
+            <p>My projects span REST APIs, JSON, Azure Functions, Cosmos DB, JavaScript, PowerShell, Git and automated deployment workflows.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="cases" aria-labelledby="cases-title">
+        <div class="section-head">
+          <h2 id="cases-title">Support stories</h2>
+          <p>Three examples of the kind of investigation, judgement and cross-team work I handle in a live enterprise environment.</p>
+        </div>
+
+        <article class="case">
+          <h3>Identity & access failures</h3>
+          <div>
+            <p><strong>Problem:</strong> users can present with MFA, lockout, Conditional Access or account-state symptoms that look similar but have different causes.</p>
+            <p><strong>Approach:</strong> review Entra sign-in and audit information, verify the user and account context, isolate the likely cause, resolve within scope or escalate with useful evidence.</p>
+            <div class="tagrow">
+              <span class="tag">Entra ID</span><span class="tag">MFA</span><span class="tag">Conditional Access</span><span class="tag">Case ownership</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <h3>Credential compromise</h3>
+          <div>
+            <p><strong>Problem:</strong> a legitimate internal account was involved in a phishing incident using a SharePoint lure.</p>
+            <p><strong>Approach:</strong> supported the investigation by reviewing sign-in evidence, escalating to Cyber Security, and helping coordinate account recovery and user follow-up under the revised access controls.</p>
+            <div class="tagrow">
+              <span class="tag">Security-sensitive support</span><span class="tag">Sign-in evidence</span><span class="tag">Cross-team response</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="case">
+          <h3>Email delivery & access</h3>
+          <div>
+            <p><strong>Problem:</strong> email cases range from non-delivery and quarantine to mailbox permissions, forwarding, calendar access and rules.</p>
+            <p><strong>Approach:</strong> use Exchange Online tools such as message trace and administrative controls to investigate the symptom, test likely causes and restore service or escalate appropriately.</p>
+            <div class="tagrow">
+              <span class="tag">Exchange Online</span><span class="tag">Message trace</span><span class="tag">Troubleshooting</span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="builds" aria-labelledby="builds-title">
+        <div class="section-head">
+          <h2 id="builds-title">Technical builds</h2>
+          <p>I am a support professional who likes understanding the systems behind the interface. These projects are how I build that depth.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project">
+            <h3>Cloud Resume Challenge</h3>
+            <p>Built a JavaScript frontend with a live visitor counter connected to an Azure Functions REST API and Cosmos DB, with deployment automated through GitHub Actions.</p>
+            <div class="tags">JavaScript · REST API · JSON · Azure · Cosmos DB · CI/CD</div>
+          </article>
+          <article class="project">
+            <h3>Process Automation Lab</h3>
+            <p>Built PowerShell account workflows with validation, dry-run checks, audit logging and pre-change state capture, then fixed logic and logging defects found during testing.</p>
+            <div class="tags">PowerShell · Testing · Automation · Auditability</div>
+          </article>
+          <article class="project">
+            <h3>Ultimate Fitness</h3>
+            <p>Translated client needs into user stories and acceptance criteria, coordinated a six-person team, and integrated an external nutrition API into a Java/Android application.</p>
+            <div class="tags">Client requirements · API integration · Java · Agile delivery</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="why">
+        <div class="why">
+          <h2>Why product support</h2>
+          <div>
+            <p>
+              The work I enjoy most sits between the user and the engineering problem: understanding what the person is actually trying to do,
+              investigating the system behaviour behind it, and turning the answer into something useful for the next case. I want to do that
+              in a product environment where APIs, ambiguity, ownership and support quality genuinely matter.
+            </p>
+            <div class="stack" aria-label="Selected technical stack">
+              <span>ServiceNow</span><span>Microsoft 365</span><span>Entra ID</span><span>Exchange Online</span>
+              <span>REST APIs</span><span>JSON</span><span>Azure</span><span>PowerShell</span><span>Python</span><span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="row">
+        <span>Takunda Z. · Technical Product Support</span>
+        <span><a href="mailto:takundainfo@gmail.com">takundainfo@gmail.com</a> · <a href="https://www.linkedin.com/in/takuz">LinkedIn</a> · <a href="https://github.com/takundaziki">GitHub</a></span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
